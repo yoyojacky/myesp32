@@ -1,4 +1,5 @@
 #!/bin/bash
+count=0 
 while true 
 do     
    if [ -e /dev/ttyUSB0 ]; then     
@@ -7,6 +8,8 @@ do
    echo "Unplug ESP32 and change a new one!"
    echo "Unplug ESP32 and change a new one!"
    echo "Unplug ESP32 and change a new one!"
-   sleep 1
+   count=`expr $count + 1`
+   sleep 1 
+   echo -e "\e[34;40mTotal: $count\e[0m"
    echo -e "\e[34;40m Waiting for Device ....\e[0m"
 done 

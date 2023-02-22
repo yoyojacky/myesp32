@@ -8,7 +8,7 @@ void setup() {
 	{
 	pinMode(leds[i], OUTPUT); 
 	Serial.println(leds[i]);
-	delay(20);
+	delay(40);
 	}
 }
 
@@ -18,6 +18,5 @@ void loop() {
 	  digitalWrite(leds[x], HIGH);
 	  delay(interval);
 	  digitalWrite(leds[x], LOW);
-	  //delay(interval);
 	}
 }
